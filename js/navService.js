@@ -22,6 +22,9 @@ export default class NavigationService {
   }
 
   initialize() {
+    // document.getElementById('homepage-menu-btn').classList.add('side-nav-menu-button-selected');
+    document.getElementById('homepage-menu-btn').click();
+
     this.navigateToPage(homepage)
   }
   
@@ -30,9 +33,9 @@ export default class NavigationService {
 
 function onclick(e) {
 
-    document.querySelectorAll('.side-nav-menu-button').forEach(element => {
-      element.classList.remove('side-nav-menu-button-selected');
-    });
+  document.querySelectorAll('.side-nav-menu-button').forEach(element => {
+    element.classList.remove('side-nav-menu-button-selected');
+  });
 
   updateUICurrentMenu(e.target);
   // mark menu btn as selected in UI
@@ -42,7 +45,7 @@ function onclick(e) {
 function updateUICurrentMenu(menuButton) {
   
   menuButton.classList.add('side-nav-menu-button-selected');
-  menuButton.style.backgroundColor = '';
-  menuButton.style.cololr = '';
+  // menuButton.style.backgroundColor = '';
+  // menuButton.style.cololr = '';
 
 }
