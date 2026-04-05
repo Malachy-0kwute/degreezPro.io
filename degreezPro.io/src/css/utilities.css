@@ -1,0 +1,92 @@
+
+/*#region BACKGROUND */
+
+.bg-surface{
+  background-color: var(--surface);
+}
+
+.bg-surface-container {
+  background-color: var(--surface-container);
+}
+
+.bg-surface-container-highest {
+  background-color: var(--surface-container-highest);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-primary-container {
+  background-color: var(--primary-container);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-secondary-container {
+  background-color: var(--secondary-container);
+}
+
+.bg-surface-variant {
+  background-color: var(--on-surface-variant);
+}
+
+/*#endregion */
+
+/*#region OUTLINE */
+
+.outline {
+  outline: 1px solid var(--outline-variant);
+  outline-offset: -1px;
+}
+
+/* #endregion */
+
+/*#region FOREGROUND */
+
+.text-color {
+  color: var(--on-surface);
+}
+
+.text-color-variant {
+  color: var(--on-surface-variant);
+}
+
+.text-color-primary {
+  color: var(--primary);
+}
+
+.text-color-primary-container {
+  color: var(--primary-container);
+}
+
+/* #endregion */
+
+/* #region POSITION */
+
+.position-static {
+  position: static;
+}
+
+.position-sticky {
+  position: sticky;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+
+/* #endregion */
+
+

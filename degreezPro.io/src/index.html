@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title id="page-title">Home</title>
+  <link rel="stylesheet" href="/src/css/main.css">
+  <link rel="stylesheet" href="/src/css/utilities.css">
+  <link rel="stylesheet" href="/src/css/controls.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="#">
+
+
+  <script type="importmap">
+  {
+    "imports": {
+      "navlinks": "./js/navlinks.js",
+      "navService": "./js/navService.js"
+      
+    }
+  }
+  </script>
+
+  <script defer type="module" src="/src/app.js"></script>
+</head>
+<body class="bg-surface-container">
+  
+  <!-- header -->
+  <header class="bg-surface position-fixed" 
+          style="height: 80px; z-index: 999; top: 0; width: 100%; display: flex; justify-content: center; align-items: center; user-select: none; border-bottom: 1px solid var(--outline-variant);">
+    <div style="justify-content:space-between; width: inherit; height: 50px; display: inherit; padding:0 30px; align-items: center;">
+      
+        <p class="h4 text-color-primary" aria-label="app title" style="margin: 0 40px 0 0; font-weight: 800;">Degreez.io</p>
+      
+        <!-- <ul class="font-size-regular" style="list-style: none; display: flex; margin-right: auto; width: 22%; font-weight: 600; justify-content: space-between;">
+          <li>
+            <a class="top-nav-menu-button" type="button" href="#" draggable="false">
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a class="top-nav-menu-button" type="button" href="#" draggable="false">
+              7-Day Forecast
+            </a>
+          </li>
+          <li>
+            <a class="top-nav-menu-button" type="button" href="#" draggable="false">
+              Air Quality
+            </a>
+          </li>
+          <li>
+            <a class="top-nav-menu-button" type="button" href="#" draggable="false">
+              Radar
+            </a>
+          </li>
+        </ul> -->
+
+        <ul  style="list-style: none; display: flex; width: 25%; font-weight: 550; justify-content: space-between; align-items: center;">
+          <li>
+            <input class="text-color bg-surface-variant search-box" aria-label="search box" type="text" placeholder="Search cities..." >
+          </li>
+          <li>
+            <button class="top-nav-button" aria-label="Notification button">
+              <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960"  width="24px" fill="var(--on-surface-variant)"><path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"/></svg>
+            </button>
+          </li>
+          <li>
+            <button class="top-nav-button" aria-label="Settings button">
+              <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="24px" fill="var(--on-surface-variant)"><path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/></svg>
+            </button>
+          </li>
+          
+          <li>
+            <button class="top-nav-button" aria-label="Theme toggle button">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--on-surface-variant)"><path d="M565-395q35-35 35-85t-35-85q-35-35-85-35t-85 35q-35 35-35 85t35 85q35 35 85 35t85-35Zm-226.5 56.5Q280-397 280-480t58.5-141.5Q397-680 480-680t141.5 58.5Q680-563 680-480t-58.5 141.5Q563-280 480-280t-141.5-58.5ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg>            
+            </button>
+          </li>
+        </ul>
+    </div>
+
+  </header>
+
+  <!-- main content -->
+  <div class="position-relative">
+
+    <!-- side menu -->
+    <aside class="bg-surface position-absolute" style="width: 300px; height: calc(100vh - 80px); top: 80px; border-right: 1px solid var(--outline-variant);">
+      <nav aria-label="Menu">
+        <!-- local weather location -->
+        <div style="height: 50px; margin: 30px; justify-content: center; display: flex; flex-direction: column;">
+          
+          <p class="h6" style="font-weight: 800; user-select: none;">Local Weather</p>
+          <p class="font-size-regular text-color-variant" style="user-select: none;">San Fransisco, CA</p>
+
+        </div>
+        
+        <!-- list of menu items -->
+        <div style="height: 216px; margin:50px 0;">
+          <ul class="font-size-regular" style="list-style: none; display: flex; flex-direction: column; font-weight: 600; height: 100%; justify-content: space-between;">
+            <li>
+              <a class="side-nav-menu-button" type="button" href="#" draggable="false">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--on-surface-variant)" style="margin: 4px 15px 0 0;">
+                    <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/>
+                  </svg>
+                </span>
+                Home
+              </a>
+            </li>
+            <li>
+              <a class="side-nav-menu-button" type="button" href="#" draggable="false">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--on-surface-variant)" style="margin: 4px 15px 0 0;">
+                    <path d="M536.5-503.5Q560-527 560-560t-23.5-56.5Q513-640 480-640t-56.5 23.5Q400-593 400-560t23.5 56.5Q447-480 480-480t56.5-23.5ZM480-186q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
+                </span>
+                Cities
+              </a>
+            </li>
+            <li>
+              <a class="side-nav-menu-button" type="button" href="#" draggable="false">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--on-surface-variant)" style="margin: 4px 15px 0 0;">
+                    <path d="m600-120-240-84-186 72q-20 8-37-4.5T120-170v-560q0-13 7.5-23t20.5-15l212-72 240 84 186-72q20-8 37 4.5t17 33.5v560q0 13-7.5 23T812-192l-212 72Zm-40-98v-468l-160-56v468l160 56Zm80 0 120-40v-474l-120 46v468Zm-440-10 120-46v-468l-120 40v474Zm440-458v468-468Zm-320-56v468-468Z"/></svg>
+                </span>
+                Radar
+              </a>
+            </li>
+            <li>
+              <a class="side-nav-menu-button" type="button" href="#" draggable="false">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--on-surface-variant)" style="margin: 4px 15px 0 0;">
+                    <path d="m40-120 440-760 440 760H40Zm138-80h604L480-720 178-200Zm330.5-51.5Q520-263 520-280t-11.5-28.5Q497-320 480-320t-28.5 11.5Q440-297 440-280t11.5 28.5Q463-240 480-240t28.5-11.5ZM440-360h80v-200h-80v200Zm40-100Z"/></svg>
+                </span>
+                Alerts
+              </a>
+            </li>
+            <li>
+              <a class="side-nav-menu-button" type="button" href="#" draggable="false">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="var(--on-surface-variant)" style="margin: 4px 15px 0 0;">
+                    <path d="M513.5-254.5Q528-269 528-290t-14.5-35.5Q499-340 478-340t-35.5 14.5Q428-311 428-290t14.5 35.5Q457-240 478-240t35.5-14.5ZM442-394h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>                
+                  </svg>
+                </span>
+                Support
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- other -->
+        <div class="position-absolute" style="height: 150px; width: 100%; margin:50px 0px; bottom: 0;">
+
+          <a class="add-location-button bg-primary-container" type="button" href="#" draggable="false">
+                Add Location
+          </a>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- main content -->
+    <main id="page-content" class="position-absolute" 
+          style="height: calc(100vh - 80px - 40px); width: calc(100vw - 300px); top: 80px; left: 300px; align-items: center; justify-content: center;">
+
+    </main> 
+  </div>
+
+  
+  <!-- footer -->
+  <footer class="position-absolute bg-surface" style="height: 40px; width: calc(100% - 300px); bottom: 0; right: 0; border-top: 1px solid var(--outline-variant);">
+    
+  </footer>
+</body>
+</html>

@@ -1,0 +1,123 @@
+:root {
+
+  /* font sizes */
+  --header-h1: 2.986rem;
+  --header-h2: 2.488rem;
+  --header-h3: 2.074rem;
+  --header-h4: 1.728rem;
+  --header-h5: 1.44rem;
+  --header-h6: 1.2rem;
+  --font-size-regular: 1rem;
+  --font-size-small: 0.833rem;
+  --font-size-xsmall: 0.694rem;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  flex: 1;
+  color: var(--on-surface);
+  font-size: var(--font-size-regular);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+
+  /* Surface & Backgrounds */
+  --surface: #0a0f13;
+  --surface-container: #141a1f;
+  --surface-container-highest: #1f272c;
+  
+  /* Primary Spectrum (High-Pressure/Hero) */
+
+  --primary: #72dcff;
+  --primary-container: #00d2ff;
+
+  /* Secondary Spectrum (Indigo/Storm) */
+  --secondary: #96a5ff;
+  --secondary-container: #2f3f92;
+
+  /* Accents & UI Details */
+  --outline-variant: #43484d;
+
+  /* Text color */
+  --on-surface: #f8fafc;       
+  --on-surface-variant: #94a3b8; 
+}
+
+/* Light Theme */
+[data-theme="light"] {
+
+  /* Surface & Backgrounds */
+  --surface: #f8fafc;         
+  --surface-container: #ffffff; 
+  --surface-container-highest: #f1f5f9; 
+
+  /* Primary Spectrum */
+  --primary: #007da5;          
+  --primary-container: #72dcff; 
+
+  /* Secondary Spectrum */
+  --secondary: #4d5bad;        
+  --secondary-container: #e0e4ff; 
+
+  /* Accents & UI Details */
+  --outline-variant: #cbd5e1;   
+  
+  /* Text specifically for light mode */
+  --on-surface: #0f172a;       
+  --on-surface-variant: #475569;
+}
+
+
+
+/* #region FONTSIZE */
+
+.h1 {
+  font-size: var(--header-h1 );
+}
+
+.h2 {
+  font-size: var(--header-h2);
+}
+
+.h3 {
+  font-size: var(--header-h3);
+}
+
+.h4 {
+  font-size: var(--header-h4);
+}
+
+.h5 {
+  font-size: var(--header-h5);
+}
+
+.h6 {
+  font-size: var(--header-h6);
+}
+
+.font-size-regular {
+  font-size: var(--font-size-regular);
+}
+
+.font-size-small {
+  font-size: var(--font-size-small);
+}
+
+.font-size-xsmall {
+  font-size: var(--font-size-xsmall);
+}
+
+/* #endregion */
+
+
+
