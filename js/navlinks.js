@@ -1,6 +1,6 @@
-export const homepage = './pages/home.html';
-export const alertpage = './pages/alert.html';
-export const citiespage = './pages/cities.html';
-export const radarpage = './pages/radar.html';
-export const settingspage = './pages/settings.html';
-export const supportpage = './pages/support.html';
+export const home = './pages/home.html';
+export const alerts = './pages/alerts.html';
+export const cities = './pages/cities.html';
+export const radar = './pages/radar.html';
+export const settings = './pages/settings.html';
+export const support = './pages/support.html';

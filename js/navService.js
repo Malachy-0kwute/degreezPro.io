@@ -1,4 +1,9 @@
-import { homepage } from "navlinks";
+import { home } from "navlinks";
+import { alerts } from "navlinks";
+import { cities } from "navlinks";
+import { radar } from "navlinks";
+import { settings } from "navlinks";
+import { support } from "navlinks";
 
 export default class NavigationService {
 
@@ -7,6 +12,8 @@ export default class NavigationService {
     menuBtns.forEach(element => {
       element.addEventListener('click', onclick);
     });
+
+    document.getElementById('setting-btn').addEventListener('click', onclick);
   }
 
   navigateToPage(page) {
@@ -18,34 +25,65 @@ export default class NavigationService {
         }
     };
     xhttp.open("GET", page);
-    xhttp.send();
+    xhttp.send();    
   }
 
   initialize() {
     // document.getElementById('homepage-menu-btn').classList.add('side-nav-menu-button-selected');
     document.getElementById('homepage-menu-btn').click();
 
-    this.navigateToPage(homepage)
+    // Set default page to home
+    this.navigateToPage(home);
   }
   
-
 }
 
 function onclick(e) {
 
+   // create instance of nav service to navigate to page
+  const navService = new NavigationService();
+
+  // if settings btn is clicked, navigate to settings page and do nothing else
+  if (e.target.id === 'setting-btn') {
+    navService.navigateToPage(settings);
+    return;
+  }
+  
+  // unselect all menu buttons in UI
   document.querySelectorAll('.side-nav-menu-button').forEach(element => {
     element.classList.remove('side-nav-menu-button-selected');
   });
 
-  updateUICurrentMenu(e.target);
   // mark menu btn as selected in UI
-  // navigate to page requested
+  setActiveNavItem(e.target);
+
+  // navigate to page based on menu btn text
+  pageFilter(e.target.innerText, navService);
 }
 
-function updateUICurrentMenu(menuButton) {
+function setActiveNavItem(menuButton) {
   
   menuButton.classList.add('side-nav-menu-button-selected');
-  // menuButton.style.backgroundColor = '';
-  // menuButton.style.cololr = '';
+  menuButton.style.backgroundColor = '';
+  menuButton.style.cololr = '';
+}
 
+function pageFilter(page, navService) {
+  switch (page.toLowerCase()) {
+    case 'home':
+      navService.navigateToPage(home);
+      break;
+    case 'alerts':
+      navService.navigateToPage(alerts);
+      break;
+    case 'cities':
+      navService.navigateToPage(cities);
+      break;
+    case 'radar':
+      navService.navigateToPage(radar);
+      break;
+    case 'support':
+      navService.navigateToPage(support);
+      break;
+  }
 }
