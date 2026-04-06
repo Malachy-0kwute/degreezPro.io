@@ -40,12 +40,19 @@ export default class NavigationService {
 
 function onclick(e) {
 
+  // set page title to menu btn text
+  document.getElementById('page-title').innerText = e.target.innerText;
+
    // create instance of nav service to navigate to page
   const navService = new NavigationService();
 
   // if settings btn is clicked, navigate to settings page and do nothing else
   if (e.target.id === 'setting-btn') {
+    // navigate to settings page
     navService.navigateToPage(settings);
+
+     // set page title to settings
+    setPageTitle('Settings');
     return;
   }
   
@@ -59,6 +66,13 @@ function onclick(e) {
 
   // navigate to page based on menu btn text
   pageFilter(e.target.innerText, navService);
+
+  // set page title to menu btn text
+  setPageTitle(e.target.innerText);
+}
+
+function setPageTitle(title) {
+  document.getElementById('page-title').innerText = title;
 }
 
 function setActiveNavItem(menuButton) {

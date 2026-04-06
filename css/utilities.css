@@ -90,3 +90,17 @@
 /* #endregion */
 
 
+/* #region PAGE */
+
+.page-default {
+  /* align-items: center;  */
+  justify-content: center;
+  display: flex; 
+  flex-direction: column;
+  height: calc(100vh - 80px - 40px); /* account for top nav and footer height  */
+  padding: 30px; 
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* #endregion */
