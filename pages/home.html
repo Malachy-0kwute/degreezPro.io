@@ -1,17 +1,114 @@
 <!DOCTYPE html>
 
-<div class="page-default">
-  <div class="bg-surface" style="height: 450px; width: 100%; margin: 0; border-radius: 12px;">
-    <div>
+<div class="page-default" style="gap: 30px; display: flex; flex-direction: column;">
+
+  <div class="bg-surface" 
+       style="min-height: 400px; display: flex; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 40px;">
+    
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 8px;">
       
+      <div style="display: flex; align-items: center; gap: 10px; color: #e3e3e3;">
+        <svg height="24" viewBox="0 -960 960 960" width="24" fill="#e3e3e3">
+          <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Z"/>
+        </svg>
+        <p id="location" class="font-size-small" style="margin: 0; font-weight: 600; letter-spacing: 1px;">
+          CURRENT LOCATION
+        </p>
+      </div>
+
+      <h1 style="font-size: 50px; font-weight: 800; margin: 0;">Fort Wayne</h1>
+
+      <div style="display: flex; align-items: baseline; gap: 20px;">
+        <h2 style="font-size: 150px; font-weight: 800; margin: 0; line-height: 1;">68°F</h2>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <p style="font-size: x-large; font-weight: 800; margin: 0; text-transform: uppercase;">Clear Sky</p>
+          <p style="font-size: large; font-weight: 400; margin: 0; opacity: 0.8;">Feels like 72°F</p>
+        </div>
+      </div>
+    </div>
+    
+    <div style="display: flex; justify-content: flex-end; align-items: flex-start; padding: 10px;">
+      <img src="./assets/sunny.svg" alt="Sunny icon" style="width: 200px; height: 200px;">
     </div>
   </div>
 
-  <div class="bg-surface" style="height: 350px; width: 100%; margin: 36px 0; border-radius: 12px;">
+  <div style="min-height: 300px; align-items: center; margin: 0; display: flex; gap: 30px;">
 
+    <div class="bg-surface" style="width: 70%; height: 100%; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 40px;
+      display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <p class="h6" style="font-weight: 700;">24-Hour Forecast</p>
+      </div>
+
+      <div style="height: 80px; width: 100%; overflow-x: auto;">
+        <table style="width: 200%; table-layout: fixed; text-align: justify; line-height: 2.3rem;">
+          <thead>
+            <tr >
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">NOW</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">1 AM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">2 AM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">3 AM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">4 AM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">5 AM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">6 AM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">7 AM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">8 AM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">9 AM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">10 AM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">11 AM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">12 PM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">1 PM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">2 PM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">3 PM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">4 PM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">5 PM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">6 PM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">7 PM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">8 PM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">9 PM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">10 PM</p></th>
+              <th><p class="font-size-small" style="margin: 0; font-weight: 600;">11 PM</p></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td><p style="margin: 0; font-weight: 800;">68°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">67°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">66°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">65°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">64°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">63°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">62°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">61°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">60°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">59°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">58°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">57°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">56°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">55°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">54°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">53°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">52°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">51°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">50°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">49°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">48°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">47°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">46°</p></td>
+              <td><p style="margin: 0; font-weight: 800;">45°</p></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="bg-surface" style=" width: 30%; height: 100%; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 40px;">
+    </div>
+  </div>
+  
+  <div class="bg-surface" style="min-height: 250px; margin: 0; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 40px;">
+    <p>Content</p>
   </div>
 
-  <div class="bg-surface" style="height: 250px; width: 100%; margin: 0; border-radius: 12px;">
-
-  </div>
 </div>

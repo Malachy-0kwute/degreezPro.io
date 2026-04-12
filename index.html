@@ -32,32 +32,9 @@
   <!-- header -->
   <header class="bg-surface position-fixed" 
           style="height: 80px; z-index: 999; top: 0; width: 100%; display: flex; justify-content: center; align-items: center; user-select: none; border-bottom: 1px solid var(--outline-variant);">
-    <div style="justify-content:space-between; width: inherit; height: 50px; display: inherit; padding:0 30px; align-items: center;">
+    <div style="justify-content:space-between; width: inherit; height: 50px; display: flex; padding:0 30px; align-items: center;">
       
         <p class="h4 text-color-primary" aria-label="app title" style="margin: 0 40px 0 0; font-weight: 800;">Degreez.io</p>
-      
-        <!-- <ul class="font-size-regular" style="list-style: none; display: flex; margin-right: auto; width: 22%; font-weight: 600; justify-content: space-between;">
-          <li>
-            <a class="top-nav-menu-button" type="button" href="#" draggable="false">
-              Dashboard
-            </a>
-          </li>
-          <li>
-            <a class="top-nav-menu-button" type="button" href="#" draggable="false">
-              7-Day Forecast
-            </a>
-          </li>
-          <li>
-            <a class="top-nav-menu-button" type="button" href="#" draggable="false">
-              Air Quality
-            </a>
-          </li>
-          <li>
-            <a class="top-nav-menu-button" type="button" href="#" draggable="false">
-              Radar
-            </a>
-          </li>
-        </ul> -->
 
         <ul  style="list-style: none; display: flex; width: 25%; font-weight: 550; justify-content: space-between; align-items: center;">
           <li>
@@ -88,8 +65,9 @@
   <div class="position-relative">
 
     <!-- side menu -->
-    <aside class="bg-surface position-absolute" style="width: 300px; height: calc(100vh - 80px); top: 80px; border-right: 1px solid var(--outline-variant);">
+    <aside class="bg-surface position-fixed" style="width: 300px; height: calc(100vh - 80px); top: 80px; left: 0; border-right: 1px solid var(--outline-variant);">
       <nav aria-label="Menu">
+        
         <!-- local weather location -->
         <div style="height: 50px; margin: 30px; justify-content: center; display: flex; flex-direction: column;">
           
@@ -163,8 +141,9 @@
 
     <!-- main content -->
     <main id="page-content" class="position-absolute" 
-          style="height: calc(100vh - 80px - 40px); width: calc(100vw - 300px); top: 80px; left: 300px; align-items: center; justify-content: center;">
-
+          style="height: calc(100vh - 80px - 40px); width: calc(100vw - 300px); top: 80px; 
+          overflow-y: auto; overflow-x: hidden; left: 300px; display: flex; flex-direction: column;">
+        <!-- Pages will be injected here -->
     </main> 
   </div>
 
