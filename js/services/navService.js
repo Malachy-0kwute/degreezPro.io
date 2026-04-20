@@ -21,10 +21,10 @@ export default class NavigationService {
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
         if (xhttp.status === 200) {
-            document.getElementById("page-content").innerHTML = this.responseText;
+          document.getElementById("page-content").innerHTML = this.responseText;
         }
     };
-    xhttp.open("GET", page);
+    xhttp.open("GET", page, true);
     xhttp.send();    
   }
 
