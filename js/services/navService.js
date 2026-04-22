@@ -16,12 +16,27 @@ export default class NavigationService {
     document.getElementById('setting-btn').addEventListener('click', onclick);
   }
 
-  navigateToPage(page) {
+  navigateToPage(page, toggleMenu = true) {
 
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
         if (xhttp.status === 200) {
           document.getElementById("page-content").innerHTML = this.responseText;
+
+          // Hide side menu if we're in toggle mode
+          const menuBtn = document.querySelector('.menu-button');
+          let menuBtnStyle = window.getComputedStyle(menuBtn);
+
+          const sideMenu = document.querySelector('aside');
+          let sideMenuStyle = window.getComputedStyle(sideMenu);
+
+          if (sideMenuStyle.display == 'flex' && page == settings) {
+            menuBtn.click();
+          }
+          
+          if (menuBtnStyle.display == 'flex' && toggleMenu == true && page != settings) {
+            menuBtn.click();  
+          }
         }
     };
     xhttp.open("GET", page, true);
@@ -33,7 +48,7 @@ export default class NavigationService {
     document.getElementById('homepage-menu-btn').click();
 
     // Set default page to home
-    this.navigateToPage(home);
+    this.navigateToPage(home, false);
   }
   
 }

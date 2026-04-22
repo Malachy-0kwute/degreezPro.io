@@ -2,12 +2,12 @@
 
 <div class="page-default" style="gap: 30px; display: flex; flex-direction: column;">
 
-  <div class="bg-surface" 
-       style="min-height: 350px; display: flex; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 40px;">
+  <div class="bg-surface container"
+       style="height: 350px; display: flex; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 40px;">
     
     <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 8px;">
       
-      <div style="display: flex; align-items: center; gap: 10px; color: #e3e3e3;" >
+      <div style="display: flex; align-items: center; gap: 10px;" >
         <svg height="24" viewBox="0 -960 960 960" width="24" fill="var(--primary)" role="img" aria-label="Current weather condition image">
           <path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Z"/>
         </svg>
@@ -18,9 +18,9 @@
 
       <h1 class="currentLocation" style="font-size: 50px; font-weight: 800; margin: 0;">Fort Wayne</h1>
 
-      <div style="display: flex; align-items: baseline; gap: 20px;">
-        <h2 style="font-size: 150px; font-weight: 800; margin: 0; line-height: 1;">68°F</h2>
-        <div style="display: flex; flex-direction: column; gap: 4px;">
+      <div class="tempContainer" style="display: flex; align-items: baseline; gap: 20px;">
+        <h2 class="tempValue" style="font-size: 150px; font-weight: 800; margin: 0; line-height: 1;">68°F</h2>
+        <div class="feelsLike" style="display: flex; flex-direction: column; gap: 4px;">
           <p class="text-color-primary" style="font-size: x-large; font-weight: 800; margin: 0; text-transform: uppercase;">Clear Sky</p>
           <p style="font-size: large; font-weight: 400; margin: 0; opacity: 0.8;">Feels like 72°F</p>
         </div>
@@ -32,9 +32,9 @@
     </div>
   </div>
 
-  <div style="min-height: 300px; align-items: center; margin: 0; display: flex; gap: 30px;">
+  <div class="container-mid" style="height: 300px; align-items: center; margin: 0; display: flex; gap: 30px;">
 
-    <div class="bg-surface" style="width: 70%; height: 100%; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 40px;
+    <div class="bg-surface forecast" style="width: 70%; height: 100%; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 40px;
       display: flex; flex-direction: column; justify-content: space-between;">
       <div>
         <p class="h6" style="font-weight: 700;">24-Hour Forecast</p>
@@ -103,7 +103,7 @@
       </div>
     </div>
 
-    <div class="bg-surface" style="display: flex; flex-direction: column; width: 30%; height: 100%; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 40px;">
+    <div class="bg-surface uvIndex" style="display: flex; flex-direction: column; width: 30%; height: 100%; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 40px;">
       <div style="display: flex; align-items: center; gap: 10px;">
         <img src="./assets/sunny.svg" alt="Sunny icon" style="width: 24px; height: 24px;">
         <p style="font-weight: 700;">UV INDEX</p>
@@ -122,8 +122,8 @@
     </div>
   </div>
   
-  <div style="height: 250px; margin: 0; display: flex; gap: 30px;">
-    <div class="bg-surface" style="height: 100%; width: 25%; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 20px;">
+  <div class="container-bottom" style="height: 250px; margin: 0; display: flex; gap: 30px;">
+    <div class="bg-surface content" style="height: 100%; width: 25%; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 20px;">
       <div style="display: flex; align-items: center; gap: 10px;">
         <img src="./assets/air.svg" alt="Sunny icon" style="width: 24px; height: 24px;">
         <p style="font-weight: 400; font-size: small;">WIND SPEED</p>
@@ -139,7 +139,7 @@
       </div>
     </div>
     
-    <div class="bg-surface" style="height: 100%; width: 25%; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 20px;">
+    <div class="bg-surface content" style="height: 100%; width: 25%; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 20px;">
       <div style="display: flex; align-items: center; gap: 10px;">
         <img src="./assets/humidity.svg" alt="Sunny icon" style="width: 24px; height: 24px;">
         <p style="font-weight: 400; font-size: small;">HUMIDITY</p>
@@ -154,7 +154,7 @@
       </div>
     </div>
     
-    <div class="bg-surface" style="height: 100%; width: 25%; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 20px;">
+    <div class="bg-surface content" style="height: 100%; width: 25%; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 20px;">
       <div style="display: flex; align-items: center; gap: 10px;">
         <img src="./assets/visibility.svg" alt="Sunny icon" style="width: 24px; height: 24px;">
         <p style="font-weight: 400; font-size: small;">VISIBILITY</p>
@@ -169,7 +169,7 @@
       </div>
     </div>
     
-    <div class="bg-surface" style="height: 100%; width: 25%; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 20px;">
+    <div class="bg-surface content" style="height: 100%; width: 25%; border-radius: 12px; border: 1px solid var(--outline-variant); padding: 20px;">
       <div style="display: flex; align-items: center; gap: 10px;">
         <img src="./assets/suncycle.svg" alt="Sunny icon" style="width: 24px; height: 24px;">
         <p style="font-weight: 400; font-size: small;">SUN CYCLE</p>
@@ -188,5 +188,5 @@
     </div>
 
   </div>
-
+  
 </div>
