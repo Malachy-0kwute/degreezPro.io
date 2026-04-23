@@ -48,7 +48,8 @@ export default class NavigationService {
     document.getElementById('homepage-menu-btn').click();
 
     // Set default page to home
-    this.navigateToPage(home, false);
+    // this.navigateToPage(home, false);
+    this.navigateToPage(cities, false);
   }
   
 }
