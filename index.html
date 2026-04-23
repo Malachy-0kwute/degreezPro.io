@@ -81,7 +81,7 @@
         <div style="height: 50px; margin: 30px; justify-content: center; display: flex; flex-direction: column;">
           
           <p class="h6" style="font-weight: 800; user-select: none;">Local Weather</p>
-          <p class="font-size-regular text-color-variant" style="user-select: none;">San Fransisco, CA</p>
+          <p class="font-size-regular text-color-variant" style="user-select: none;">Fort Wayne, IN</p>
 
         </div>
         
@@ -165,5 +165,25 @@
       <a>CONTACT</a>
     </div>
   </footer>
+
+  <section class="add-location-popup position-relative"
+     style="z-index: 9999; top: 0; height: 100%; width: 100%; justify-content: center; align-items: center;
+     user-select: none;">
+    <div class="bg-surface" style="height: 100%; width: 100%; opacity: 0.6;" ></div>
+
+    <div class="position-absolute bg-surface" style="border-radius: 10px; border: 1px solid var(--outline-variant); padding: 20px; height: 200px;">
+      
+      <form action="#" style="display: flex; flex-direction: column;" aria-label="Add location popup dialog">
+        <div>
+          <p style="font-size: 24px; font-weight: 800; margin-bottom: 10px;">Add a new location</p>
+          <input class="text-color bg-surface-variant search-box" aria-label="search box" type="text" placeholder="Enter city name..." >
+        </div>
+
+        <a class="submit add-location-button bg-primary-container" type="button" href="#" draggable="false" style="margin: 40px 0; padding: 0; align-items: center;">
+                Add Location
+        </a>
+      </form>
+    </div>
+  </section>
 </body>
 </html>

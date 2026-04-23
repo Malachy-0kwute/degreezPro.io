@@ -111,3 +111,12 @@
 .add-location-button:hover {
   transform: scale(1.05);
 }
+
+.add-location-popup.active {
+  display: flex;
+}
+
+.add-location-popup {
+  display: none;
+}
+
