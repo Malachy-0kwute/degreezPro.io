@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title id="page-title">Degreez.io</title>
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="stylesheet" href="./css/utilities.css">
-  <link rel="stylesheet" href="./css/controls.css">
+  <link rel="stylesheet" href="./css/styles.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,7 +48,7 @@
             <input class="text-color bg-surface-variant search-box" aria-label="search box" type="text" placeholder="Search cities..." >
           </li>
           <li>
-            <button class="top-nav-button" aria-label="Notification button">
+            <button class="notification-button top-nav-button" aria-label="Notification button">
               <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960"  width="24px" fill="var(--on-surface-variant)"><path d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z"/></svg>
             </button>
           </li>
@@ -70,6 +68,46 @@
 
   </header>
 
+  <!-- Notification section -->
+  <section class="notification bg-surface position-fixed outline" 
+           style="z-index: 9999; height: 400px; width: 350px; border-radius: 12px; top: 65px; right: 100px; overflow: hidden;">
+           <div style="display: flex; flex-direction: column; height: 100%; width: 100%;">
+             <!-- title  -->
+              <div style="border-bottom: 1px solid var(--outline-variant); padding: 12px 18px; user-select: none;">
+                <p style="font-size: large; font-weight: 600;">Notifications</p>
+              </div>
+             <!-- notification items -->
+              <div style="display: flex; flex-direction: column; justify-content: start; height: 80%; overflow-y: auto; overflow-x: hidden;">
+                
+                <!-- no notification message -->
+                <!-- <p>No new notifications</p> -->
+
+                <div class="notification-item" style="display: flex; flex-direction: column; padding: 12px 18px; border: 1px solid; border-color: var(--outline-variant);">
+                  <div style="display: flex; flex-direction: column; width: 100%;">
+                    <div style="display: flex;">
+                      <p style="font-weight: 600; font-size: medium;">Severe Weather Alert</p>
+
+                      <div class="new-notification-indicator" style="background-color: var(--primary); height: 8px; width: 8px; align-self: center; border-radius: 4px; margin-left: auto; margin-right: 4px;">
+                      </div>
+                    </div>
+                    <p style="font-size: small; color: var(--on-surface-variant); font-size: small; text-overflow: ellipsis; overflow: hidden; white-space: nowrap">Thunderstorm warning in your area until 6 PM. oasdf  ouiha iwebhdishbuiebsdf</p>
+
+                  </div>
+                </div>
+
+              </div>
+             <!-- bottom action buttons eg. mark all as read, clear notifications etc -->
+              <div style="display: flex; justify-content: space-between; padding: 18px;  border-top: 1px solid var(--outline-variant);">
+                <button class="notification-popup-button" aria-label="Mark all as read button" >
+                  Mark all as read
+                </button>
+                <button class="notification-popup-button outline" aria-label="Clear notifications button" style="background-color: transparent; color: var(--on-surface-variant);">
+                  Clear
+                </button>
+              </div>
+            </div>
+  </section>
+  
   <!-- main content -->
   <div class="position-relative">
 
