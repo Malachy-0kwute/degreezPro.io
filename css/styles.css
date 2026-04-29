@@ -33,6 +33,15 @@ body {
   overflow: hidden;
 }
 
+textarea, form, input {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--on-surface);
+  font-size: var(--font-size-regular);
+}
+
 /* Dark Theme */
 [data-theme="dark"] {
 
@@ -336,6 +345,7 @@ body {
 .search-box {
   border: none;
   border-radius: 6px;
+  font-size: medium;
   width: 300px; 
   height: 35px;
   background-color: var(--surface-container-highest);
@@ -346,7 +356,7 @@ body {
   outline: none;
 }
 
-.search-box::placeholder {
+.search-box::placeholder, textarea::placeholder {
   color: var(--on-surface-variant);
 }
 
@@ -463,6 +473,37 @@ body {
   transform: scale(1.2);
 }
 
+.contact-us-send-button {
+  font-size: 18px;
+  font-weight: 700;
+  display: flex; 
+  text-align: center; 
+  justify-content: center; 
+  color: var(--surface-container);
+  padding: 10px 20px; 
+  border: none;  
+  border-radius: 10px; 
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+}
+
+.contact-us-textarea {
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  height: 250px;
+  background-color: var(--surface-container-highest); 
+  color: var(--on-surface);
+  font-size: medium;
+  padding: 12px 20px;
+  resize: none;
+}
+
+.contact-us-send-button:hover {
+  transform: scale(1.02);
+}
+
 .notification {
   display: none;
 }
@@ -475,7 +516,7 @@ body {
   padding: 4px 14px; 
   font-size: medium; 
   background-color: var(--primary); 
-  color: var(--surface-container); 
+  color: var(--surface-container);
   border-radius: 8px; 
   border: none;
   align-items: center;
