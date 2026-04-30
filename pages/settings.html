@@ -1,5 +1,63 @@
 <!DOCTYPE html>
 
-<div style="align-items: center; justify-content: center; text-align: center; display: flex; height: 100vh;">
-  <h1>SETTINGS PAGE<br>UNDER CONSTRUCTION</h1>
+<div class="page-default" style="display: flex; flex-direction: column; gap: 20px; overflow-y: auto; overflow-x: hidden;">
+  <div class="outline bg-surface" style="display: flex; height: calc(100vh - 80px - 40px - 60px); width: 100%; border-radius: 12px; overflow: hidden; padding: 30px; gap: 40px;">
+    <div style="display: flex; flex-direction: column; gap: 20px; max-width: 400px;">
+      <div>
+        <h1 class="h3" style="margin: 0;">Settings</h1>
+        <p class="text-color-variant" style="margin: 0;">Manage your account settings and preferences.</p>
+      </div>
+
+      <!-- appearance settings -->
+      <div>
+        <h2 style="margin-bottom: 20px;">Appearance</h2>
+
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="display: flex; align-items: center; gap: 50px; max-width: 400px;">
+              <!-- theme -->
+              <label for="theme-select" style="width: 60%;">Theme:</label>
+              <select id="theme-select" name="theme" style="width: 150px; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--outline-variant); background-color: var(--surface); color: var(--on-surface);">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+                <option value="system">System Default</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <!-- languange and time settings -->
+          <h2 style="margin-bottom: 20px;">Language & Time</h2>
+
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 50px; max-width: 400px;">
+              <!-- language -->
+              <label for="language-select" style="width: 60%;">Language:</label>
+              <select id="language-select" name="language" style="width: 150px; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--outline-variant); background-color: var(--surface); color: var(--on-surface);">
+                <option value="en">English (US)</option>
+                <option value="en">English (UK)</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="ja">Japanese</option>
+              </select>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 50px;">
+              <!-- time zone -->
+              <label for="timezone-select" style="width: 60%;">Time Zone:</label>
+              <select id="timezone-select" name="timezone" style="width: 150px; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--outline-variant); background-color: var(--surface); color: var(--on-surface);">
+                <option value="utc-12">UTC-12:00</option>
+                <option value="utc-11">UTC-11:00</option>
+                <option value="utc-10">UTC-10:00</option>
+                <option value="utc+0">UTC+00:00</option>
+                <option value="utc+1">UTC+01:00</option>
+                <option value="utc+2">UTC+02:00</option>
+                <option value="utc+12">UTC+12:00</option>
+              </select>
+            </div>
+        </div>
+      </div>
+    </div>  
+  </div>  
 </div>

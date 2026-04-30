@@ -373,6 +373,10 @@ textarea, form, input {
   fill: var(--on-surface);
 }
 
+.footer-button:hover {
+  color: var(--on-surface);
+}
+
 .top-nav-button:hover, .top-nav-button:hover svg {
   background-color: var(--surface-container-highest);
   fill: var(--on-surface);

@@ -3,7 +3,7 @@
 <div class="page-default" style="display: flex; flex-direction: column; gap: 20px; overflow-y: auto; overflow-x: hidden;">
   <!-- control template -->
   <div class="outline bg-surface" style="display: flex; height: calc(100vh - 80px - 40px - 60px); width: 100%; border-radius: 12px; overflow: hidden; padding: 30px; align-items: center; justify-content: center; gap: 40px;">
-    <form action="post" style="gap: 40px; display: flex; flex-direction: column;">
+    <form action="post" style="height: 100%; gap: 40px; display: flex; flex-direction: column;">
 
       <div style="margin-bottom: 60px; width: 60%;">
         <h1 >Get in touch with us</h1>
@@ -35,7 +35,7 @@
       <a type="submit" class="bg-primary-container contact-us-send-button">Send Message</a>
     </form>
 
-    <div class="outline" style="width: 40%; height: 100%; border-radius: 12px; display: flex; flex-direction: column; gap: 20px; padding: 30px; background-color: var(--surface-container-highest);">
+    <div class="outline" style="height: 100%; max-width: 600px; border-radius: 12px; display: flex; flex-direction: column; gap: 20px; padding: 30px; background-color: var(--surface-container-highest);">
       <h2>Contact Information</h2>
       <p>If you have any questions or need assistance, feel free to reach out to us through the following contact information:</p>
       <div style="display: flex; flex-direction: column; gap: 10px;">
@@ -52,15 +52,19 @@
       <div  style="display: flex; flex-direction: column; gap: 10px; margin-top: 50px;">
         <h3 style="margin-bottom: 20px;">Follow Us</h3>
         <div style="display: flex; gap: 30px; font-size: 42px;">
-          <a href="https://facebook.com" target="_blank" class="text-color" style="display: flex; align-items: center; gap: 5px; ">
+          <a href="https://facebook.com" target="_blank" title="facebook" class="text-color" style="display: flex; align-items: center; gap: 5px; ">
             <wa-icon name="square-facebook" family="brands"></wa-icon>
           </a>
-          <a href="https://twitter.com" target="_blank" class="text-color" style="display: flex; align-items: center; gap: 5px;">
+          <a href="https://x.com" target="_blank" title="follow us on X" class="text-color" style="display: flex; align-items: center; gap: 5px;">
             <wa-icon name="square-x-twitter" family="brands"></wa-icon>
           </a>
-          <a href="https://instagram.com" target="_blank" class="text-color" style="display: flex; align-items: center; gap: 5px;">
+          <a href="https://instagram.com" target="_blank" title="instagram" class="text-color" style="display: flex; align-items: center; gap: 5px;">
             <wa-icon name="square-instagram" family="brands"></wa-icon>
           </a>
+          <a href="https://youtube.com" target="_blank" title="youtube" class="text-color" style="display: flex; align-items: center; gap: 5px;">
+            <wa-icon name="square-youtube" family="brands"></wa-icon>
+          </a>
+          
         </div>
       </div>
 
