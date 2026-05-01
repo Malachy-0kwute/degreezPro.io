@@ -268,6 +268,57 @@ textarea, form, input {
   }
 }
 
+@media (max-width: 1560px) {
+  form {
+    gap: 20px !important;
+  }
+
+  form > div {
+    margin-bottom: 20px !important;
+  }
+
+  .contact-us-textarea {
+    height: 150px !important;
+  }
+}
+
+@media (max-width: 1500px) {
+  form {
+    gap: 20px !important;
+  }
+
+  form > div {
+    margin-bottom: 10px !important;
+  }
+
+  .contact-us-textarea {
+    height: 150px !important;
+  }
+
+  .support-page {
+    flex-direction: column !important;
+   }
+
+  form, .contact-information {
+  max-width: 100% !important;
+  width: 100% !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .name {
+    flex-direction: column !important;
+  }
+
+  div {
+    width: 100% !important;
+  }
+
+  .social-links {
+   gap: 4px !important;
+  }
+}
+
 @media (max-width: 700px) {
 
     .sidemenu { 
@@ -375,6 +426,15 @@ textarea, form, input {
 
 .footer-button:hover {
   color: var(--on-surface);
+}
+
+.footer-button {
+  color: var(--on-surface-variant);
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .top-nav-button:hover, .top-nav-button:hover svg {

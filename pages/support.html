@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
-<div class="page-default" style="display: flex; flex-direction: column; gap: 20px; overflow-y: auto; overflow-x: hidden;">
+<div class="page-default" style="min-height: 100%; display: flex; flex-direction: column; gap: 20px; overflow: hidden;">
   <!-- control template -->
-  <div class="outline bg-surface" style="display: flex; height: calc(100vh - 80px - 40px - 60px); width: 100%; border-radius: 12px; overflow: hidden; padding: 30px; align-items: center; justify-content: center; gap: 40px;">
+  <div class="outline bg-surface support-page" style="display: flex; min-height: calc(100vh - 80px - 40px - 60px); width: 100%; border-radius: 12px; overflow: hidden; padding: 30px; align-items: center; justify-content: center; gap: 40px;">
     <form action="post" style="height: 100%; gap: 40px; display: flex; flex-direction: column;">
 
       <div style="margin-bottom: 60px; width: 60%;">
@@ -10,15 +10,15 @@
         <!-- <p>Need help with anything? Send us a message and we'll get back to you as soon as possible.</p> -->
       </div>
 
-      <div style="display: flex; gap: 40px;">
-        <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div class="name" style="display: flex; gap: 40px;">
+        <div style="display: flex; flex-direction: column; gap: 10px; width: 50%;">
           <label for="firstname" style="font-size: medium; font-weight: bold;">Firstname</label>
-          <input type="text" id="firstname" name="firstname" placeholder="Enter firstname" class="text-color search-box" style="height: 45px;">
+          <input type="text" id="firstname" name="firstname" placeholder="Enter firstname" class="text-color search-box" style="width: 100%; height: 45px;">
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div style="display: flex; flex-direction: column; gap: 10px; width: 50%;">
           <label for="lastname" style="font-size: medium; font-weight: bold;">Lastname</label>
-          <input type="text" id="lastname" name="lastname" placeholder="Enter lastname" class="text-color search-box" style="height: 45px;">
+          <input type="text" id="lastname" name="lastname" placeholder="Enter lastname" class="text-color search-box" style="width: 100%; height: 45px;">
         </div>  
       </div>
 
@@ -35,7 +35,7 @@
       <a type="submit" class="bg-primary-container contact-us-send-button">Send Message</a>
     </form>
 
-    <div class="outline" style="height: 100%; max-width: 600px; border-radius: 12px; display: flex; flex-direction: column; gap: 20px; padding: 30px; background-color: var(--surface-container-highest);">
+    <div class="outline contact-information" style="height: 100%; max-width: 600px; border-radius: 12px; display: flex; flex-direction: column; gap: 20px; padding: 30px; background-color: var(--surface-container-highest);">
       <h2>Contact Information</h2>
       <p>If you have any questions or need assistance, feel free to reach out to us through the following contact information:</p>
       <div style="display: flex; flex-direction: column; gap: 10px;">
@@ -51,18 +51,26 @@
 
       <div  style="display: flex; flex-direction: column; gap: 10px; margin-top: 50px;">
         <h3 style="margin-bottom: 20px;">Follow Us</h3>
-        <div style="display: flex; gap: 30px; font-size: 42px;">
-          <a href="https://facebook.com" target="_blank" title="facebook" class="text-color" style="display: flex; align-items: center; gap: 5px; ">
-            <wa-icon name="square-facebook" family="brands"></wa-icon>
+        <div class="social-links" style="display: flex; gap: 30px; font-size: 42px;">
+          <a href="https://facebook.com" target="_blank" title="facebook" class="text-color" style="display: flex; align-items: center; gap: 5px;">
+            <a:visited style="color: var(--on-surface);">
+              <wa-icon name="square-facebook" family="brands"></wa-icon>
+            </a:visited>
           </a>
           <a href="https://x.com" target="_blank" title="follow us on X" class="text-color" style="display: flex; align-items: center; gap: 5px;">
-            <wa-icon name="square-x-twitter" family="brands"></wa-icon>
+            <a:visited style="color: var(--on-surface);">
+              <wa-icon name="square-x-twitter" family="brands"></wa-icon>
+            </a:visited>
           </a>
           <a href="https://instagram.com" target="_blank" title="instagram" class="text-color" style="display: flex; align-items: center; gap: 5px;">
-            <wa-icon name="square-instagram" family="brands"></wa-icon>
+            <a:visited style="color: var(--on-surface);">
+              <wa-icon name="square-instagram" family="brands"></wa-icon>
+            </a:visited>
           </a>
           <a href="https://youtube.com" target="_blank" title="youtube" class="text-color" style="display: flex; align-items: center; gap: 5px;">
-            <wa-icon name="square-youtube" family="brands"></wa-icon>
+            <a:visited style="color: var(--on-surface);">
+              <wa-icon name="square-youtube" family="brands"></wa-icon>
+            </a:visited>
           </a>
           
         </div>
