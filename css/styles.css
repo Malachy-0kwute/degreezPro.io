@@ -592,3 +592,11 @@ a {
 .notification-popup-button:hover {
   transform: scale(1.05);
 }
+
+/* .form-input:valid {
+  border: none;
+}
+
+.form-input:invalid {
+  border: 2px solid #eb5f5f;
+} */

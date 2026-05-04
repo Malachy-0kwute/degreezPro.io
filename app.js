@@ -1,6 +1,9 @@
 import NavigationService from "navService";
 import  getLocationCoordinates  from "apiService";
 import * as homeContent from "homePage";
+import * as supportContent from "supportPage";
+import { support } from "navlinks";
+
 
 const navService = new NavigationService();
 navService.initialize();
@@ -28,4 +31,3 @@ document.querySelector('.submit').addEventListener('click', toggleAddLocationPop
 // toggle notification popup
 document.querySelector('.notification-button').addEventListener('click', toggleNotificationPopup);
 document.querySelector('.notification-button').addEventListener('blur', toggleNotificationPopup); // hide notification popup when it loses focus
-

@@ -9,8 +9,8 @@ export async function setCurrentLocationName(location = "Fort Wayne") {
   locationElement.textContent = location;
 }
 
-async function getLocation() {
-  const location = await getLocationCoordinates("Fort Wayne");
+function getLocation() {
+  const location = getLocationCoordinates("Fort Wayne");
 }
 
 getLocation();

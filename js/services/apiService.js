@@ -10,7 +10,6 @@ export default function getLocationCoordinates(location) {
   })
   .then((response) => response.json())
   .then((response) => {
-
     getWeatherData(response.results[0].latitude, response.results[0].longitude);
   });
 

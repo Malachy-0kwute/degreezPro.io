@@ -13,18 +13,21 @@
       <div class="name" style="display: flex; gap: 40px;">
         <div style="display: flex; flex-direction: column; gap: 10px; width: 50%;">
           <label for="firstname" style="font-size: medium; font-weight: bold;">Firstname</label>
-          <input type="text" id="firstname" name="firstname" placeholder="Enter firstname" class="text-color search-box" style="width: 100%; height: 45px;">
+          <input type="text" required aria aria-required="true" minlength="3" id="firstname" name="firstname" placeholder="Enter firstname" class="text-color search-box form-input" style="width: 100%; height: 45px;">
+          <p class="error-message" style="color: #eb5f5f; display: none;">Please enter a valid firstname (at least 3 characters).</p>
         </div>
 
         <div style="display: flex; flex-direction: column; gap: 10px; width: 50%;">
           <label for="lastname" style="font-size: medium; font-weight: bold;">Lastname</label>
-          <input type="text" id="lastname" name="lastname" placeholder="Enter lastname" class="text-color search-box" style="width: 100%; height: 45px;">
+          <input type="text" required aria aria-required="true" minlength="3" id="lastname" name="lastname" placeholder="Enter lastname" class="text-color search-box form-input" style="width: 100%; height: 45px;">
+          <p class="error-message" style="color: #eb5f5f; display: none;">Please enter a valid lastname (at least 3 characters).</p>
         </div>  
       </div>
 
       <div style="display: flex; flex-direction: column; gap: 10px;">
         <label for="email" style="font-size: medium; font-weight: bold;">Email</label>
-        <input type="email" id="email" name="email" placeholder="email@example.com" class="text-color search-box" style="width: 100%; height: 45px;">
+        <input type="email" required aria aria-required="true" id="email" name="email" placeholder="email@example.com" class="text-color search-box form-input" style="width: 100%; height: 45px;">
+        <p class="error-message" style="color: #eb5f5f; display: none;">Please enter a valid email address.</p>
       </div>
 
       <div style="display: flex; flex-direction: column; gap: 10px;">
