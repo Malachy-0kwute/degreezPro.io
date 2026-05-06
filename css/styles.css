@@ -288,7 +288,7 @@ textarea, form, input {
   }
 
   form > div {
-    margin-bottom: 10px !important;
+    margin-bottom: 20px !important;
   }
 
   .contact-us-textarea {
@@ -310,7 +310,11 @@ textarea, form, input {
     flex-direction: column !important;
   }
 
-  div {
+  .add-location-input {
+    width: 300px !important;
+  }
+  
+  .name > div {
     width: 100% !important;
   }
 

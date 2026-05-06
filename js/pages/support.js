@@ -1,5 +1,8 @@
 import { support } from "navlinks";
+import * as helpers from "utilities";
 
-document.addEventListener('DOMContentLoaded', () => {
-  console.log(document.querySelector('#page-content'));
+let btn = await helpers.getElementByClassName(support, "contact-us-send-button");
+
+btn.addEventListener('click', () => {
+  console.log("Contact Us Send Button Clicked:", btn);
 });
